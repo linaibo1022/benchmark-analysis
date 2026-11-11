@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+# 私人面试准备材料，不上传到公开仓库
+interview-guide.md
+resume-snippet.md
