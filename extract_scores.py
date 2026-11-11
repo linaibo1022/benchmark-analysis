@@ -1,4 +1,4 @@
-"""从 C:\\Users\\lab\\Documents\\benchmark 的 12 份 benchmark_qN.md 里抽取分数。
+"""从本地 benchmark 目录（q1..q12 的 benchmark_qN.md）里抽取分数。
 
 不同题目的排版不完全一致，按以下优先级找 GPT 总分：
     1) "GPT 5.6 Pro：X/10"
@@ -23,7 +23,8 @@ from pathlib import Path
 
 import pandas as pd
 
-BENCH = Path(r"C:\Users\lab\Documents\benchmark")
+# 本地 benchmark 目录（该目录含原始题目与回答，不要提交到公开仓库）
+BENCH = Path(__file__).resolve().parent.parent.parent / "benchmark"
 OUT = Path(__file__).parent / "data"
 
 NUM = r"([0-9]+(?:\.[0-9]+)?)"
